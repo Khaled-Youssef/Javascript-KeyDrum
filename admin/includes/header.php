@@ -5,10 +5,11 @@
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
-        <title></title>
+        <title><?php echo $pagetitle ?></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="../assets/libs/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
     </head>
     <body style="overflow-x:hidden;">
     <header>
@@ -23,7 +24,7 @@
                             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                               <ul class="navbar-nav mr-auto">
                                 <li class="nav-item active">
-                                  <a class="nav-link" href="#">Home</a>
+                                  <a class="nav-link" href="#">Dashboard</a>
                                 </li>
                                 <li class="nav-item dropdown">
                                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -31,7 +32,15 @@
                                   </a>
                                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="#">Content Management</a>
-                                    <a class="dropdown-item" href="#">user Management</a>
+                                    <a class="nav-link dropdown-toggle" href="#" id="userManDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                      User Management
+                                    </a>
+
+                                    <div class="dropdown-menu" aria-labelledby="userManDropdown">
+                                      <a class="dropdown-item" href="#">Users Management</a>
+                                      <a class="dropdown-item" href="#">Pages Roles Management</a>
+                                      <a class="dropdown-item" href="#">Roles Management</a>
+                                    </div>
                                     <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="#">Logout</a>
                                   </div>
@@ -50,8 +59,8 @@
         </div>
     </header>
 
-    <section class="bg-dark text-white py-4">
-        <div class="container">
+    <section class="bg-dark text-white pb-3 pt-5 page-header">
+        <div class="container pt-3">
             <h1><?php echo $pagetitle ?></h1>
         </div>
 

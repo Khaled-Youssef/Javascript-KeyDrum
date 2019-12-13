@@ -4,3 +4,9 @@
 
     </body>
 </html>
+
+<?php 
+    if (isset($dbconnection)){
+        $dbconnection = null;
+    }
+?>

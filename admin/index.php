@@ -1,6 +1,7 @@
 <?php
 $pagetitle = "Dashboard";
 include_once('includes/header.php');
+include_once('includes/config.php');
 ?>
 
         

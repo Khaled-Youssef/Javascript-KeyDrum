@@ -1,3 +1,16 @@
-header{
-    position:fixed;
+/* Global style */
+
+header {
+	position: fixed;
+	width: 100%;
+	background: #fff;
+}
+
+header .dropdown-menu .dropdown-menu {
+	left: 100%;
+	top: 0;
+}
+
+.page-header{
+    padding-top:30px;
 }
