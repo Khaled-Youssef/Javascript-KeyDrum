@@ -9,6 +9,15 @@ class dbtable{
         $allData= $sqlStmt->fetchall();
         return $allData;
     }
+
+    public function selectOne($where){
+        global $dbConnection;
+        $tablename = get_class($this);
+        $sqlStmt= $dbConnection -> prepare("SELECT * FROM $tablename WHERE $where");
+        $sqlStmt ->execute();
+        $allData= $sqlStmt->fetch();
+        return $allData;
+    }
 }
 
 

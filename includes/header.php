@@ -1,3 +1,6 @@
+<?php
+ session_start();
+?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -59,7 +62,7 @@
             </div>
         </div>
       <?php include_once "tables.class.php" ?>
-      <?php include_once "login.php" ?>
+      <?php include_once "loginform.php" ?>
       <?php include_once "register.php" ?>
     </header>
 

@@ -1,34 +1,26 @@
-    <!-- Modal -->
-    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="loginModalLabel">Login</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-      <form action="login.php" method="post">
-        <div class="form-group">
-          <label for="loginInputEmail1">Email address</label>
-          <input type="email" class="form-control" id="loginInputEmail1" aria-describedby="emailHelp">
-          
-        </div>
-        <div class="form-group">
-          <label for="loginInputPassword1">Password</label>
-          <input type="password" class="form-control" id="loginInputPassword1">
-        </div>
-        <div class="form-group form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-          <label class="form-check-label" for="exampleCheck1">Remember Me</label>
-        </div>
-        <button type="submit" class="btn btn-primary">Login</button>
-      </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
+<?php 
+$pagetitle = "Login";
+include_once 'includes/tables.class.php';
+include_once 'includes/header.php';
+  if (isset($_POST)){
+    if (!empty($_POST) && (!empty($_POST))){
+    $loginEmail= $_POST['loginEmail'];
+    $loginPassword= $_POST['loginPassword'];
+    $loginCheck = new users;
+    $loginResult = $loginCheck -> selectOne("email = '$loginEmail' AND password = '$loginPassword'");
+     if (!empty((array) $loginResult)){
+        echo "Login Successfully </br>";
+        print_r($loginResult);
+        $_SESSION['email'] = $loginEmail;
+        $_SESSION['password'] = $loginPassword;
+        $_SESSION['userGroup'] =  $loginResult['userGroup'];
+        print_r($_SESSION);
+    }
+      else{
+          echo "<h3>Login failed</h3>  <p>Please try againg</p> <a href=" . $scriptLink . ">Try again";
+      }
+    }
+  }
+
+?>
+
