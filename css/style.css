@@ -1,0 +1,85 @@
+--root{
+
+}
+
+body{
+    background: url('../img/body_bg.jpg') no-repeat top center ;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+.container{
+    width: 90%;
+    margin: auto;
+}
+
+.drum{
+    display: flex;
+    gap:3%;
+    align-items: center;
+    align-content: center;
+    height: 100vh;
+}
+
+.key {
+	width: 9%;
+	min-height: 5vw;
+	background-color: #0000007e;
+	text-align: center;
+	color: #fff;
+	font-size: 70px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	border: 3px solid #000;
+	box-shadow: 1px 1px 5px 0px #000;
+	text-transform: uppercase;
+	transition: all 0.7s;
+	box-sizing: border-box;
+}
+.key.played {
+    border: 5px solid #ffc600;
+    box-shadow: 0 0 0 10px #ffc600;
+}
+kbd{
+    width: 100%;
+    text-align: center;
+    width: 100%;
+}
+
+.pressed {
+	box-shadow: 0px 0px 4px 5px yellow;
+	border: 3px solid yellow;
+}
+
+.sound {
+	font-size: 17px;
+	display: block;
+	color: yellow;
+}
+
+
+.copyrights {
+	position: fixed;
+	z-index: 9999;
+	width: 100%;
+	bottom: 20px;
+	text-align: center;
+	font-size: 19px;
+	color: #fff;
+}
+
+
+.copyrights a {
+	color: #fff;
+	text-decoration: none;
+}
+
+
+.copyrights a img {
+	width: 80px;
+	display: inline-block;
+	position: relative;
+	top: 25px;
+}
